@@ -198,11 +198,22 @@ def main(_user, _passwd, min_1, max_1):
 
 
 # 获取时间戳
+#def get_time():
+#    url = 'https://api.m.jd.com/client.action?functionId=queryMaterialProducts&client=wh5'
+#    response = requests.get(url, headers=headers).json()
+#    t = response['currentTime2']
+#    return t
+
+# 获取时间戳1111
 def get_time():
-    url = 'https://api.m.jd.com/client.action?functionId=queryMaterialProducts&client=wh5'
-    response = requests.get(url, headers=headers).json()
-    t = response['currentTime2']
+    import time
+    timestamp = int(time.time())
+    t = timestamp
     return t
+
+print(get_time())
+
+
 
 
 # 获取app_token
